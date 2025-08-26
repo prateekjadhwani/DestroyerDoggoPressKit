@@ -88,7 +88,7 @@ function appendContent() {
 
       // press kit label
       var pressKit = document.createElement("h2");
-      pressKit.innerHTML = "Bao Bao's Cozy Laundromat PRESS KIT";
+      pressKit.innerHTML = projectDetails.title + " PRESS KIT";
       conteiner.append(pressKit);
 
       // title section
