@@ -133,6 +133,31 @@ function appendContent() {
         link.append(linkTextArea);
       }
 
+      console.log("xboxLink: " + projectDetails.xboxLink)
+      if (typeof projectDetails.xboxLink !== "undefined") {
+        var xboxLink = document.createElement("div");
+        xboxLink.classList.add("section");
+        xboxLink.id = "xboxLink";
+        conteiner.append(xboxLink);
+
+        var xboxLinkTitle = document.createElement("div");
+        xboxLinkTitle.classList.add("section_title");
+        xboxLinkTitle.innerHTML = "🖥 Link to XBOX Store Page";
+        xboxLink.append(xboxLinkTitle);
+
+        var xboxLinkButtons = document.createElement("div");
+        xboxLinkButtons.classList.add("buttons");
+        xboxLink.append(xboxLinkButtons);
+
+        xboxLinkButtons.append(getClipboardButton());
+
+        var xboxLinkTextArea = document.createElement("textarea");
+        xboxLinkTextArea.readOnly = true;
+        xboxLinkTextArea.classList.add("text_box");
+        xboxLinkTextArea.append(projectDetails.xboxLink);
+        xboxLink.append(xboxLinkTextArea);
+      }
+
        // link section
       if (typeof projectDetails.keysForReview !== "undefined") {
         var keysForReview = document.createElement("div");
